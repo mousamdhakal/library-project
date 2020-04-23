@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <h1 class="main-header">My Library</h1>
+    <!-- Popup modal form to add book -->
+    <div class="book-adder">
+        <h3 id="left-text">Add book</h3>
+        <button id="create" class="button">Add book</button>
+    </div>
+    
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="main-form">
+                <h2 class="main-header">Add book</h2>   
+                
+                <div class="form-element-wrapper">
+                <label for="name">Book Name</label>
+                <input id="name" type="text" placeholder = "Enter book name" name="name" required>
+                </div>
+
+                <div class="form-element-wrapper">
+                <label for="author">Author Name</label>
+                <input id="author" type="text" placeholder = "Enter author name" name="author" required>
+                </div>
+                <div class="form-element-wrapper">
+                <label for="page">Pages</label><br/>
+                <input id="pages" type="number" placeholder = "Enter number of pages" name="page" required><br />
+                </div>
+                <input type="radio" id="read" onclick="radioValue(this.value)" name="read-or-not" value="read">
+                <label for="read" >Read</label><br/>
+                <input type="radio" id="not-read" onclick="radioValue(this.value)" name="read-or-not"  value="Not-read">
+                <label for="not-read">Not Read</label><br/>
+                
+                
+                <button id="form-button" class="button" onclick="addBook()">Add</button>
+            </form>
+        </div>
+    </div>
+    <table>
+        <!-- The table of books info goes here -->
+    </table>
+    
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/modal.js"></script>
+</body>
+</html>
